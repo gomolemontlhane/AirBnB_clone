@@ -32,3 +32,9 @@ class BaseModel:
         obj_dict['updated_at'] = self.updated_at.isoformat()
         return obj_dict
 
+    def from_dict(self, data):
+        """Update instance attributes from dictionary"""
+        for key, value in data.items():
+            if key != '__class__':
+                setattr(self, key, value)
+

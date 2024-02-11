@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-""" Engine package """
+"""This module initializes the engines package."""
 

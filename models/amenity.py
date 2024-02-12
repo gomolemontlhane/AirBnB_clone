@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Defines the Amenity class."""
+"""Defines the Amenity Modules/class.
+Inherits from Superclass BaseModel
+"""
 from models.base_model import BaseModel
 
 

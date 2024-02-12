@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defines unittests for console.py.
+"""Unittests for console.py.
 
 Unittest classes:
     TestHBNBCommand_prompting
@@ -12,13 +12,14 @@ Unittest classes:
     TestHBNBCommand_update
 """
 import os
-import sys
 import unittest
+import sys
 from models import storage
 from models.engine.file_storage import FileStorage
 from console import HBNBCommand
-from io import StringIO
 from unittest.mock import patch
+from io import StringIO
+
 
 
 class TestHBNBCommand_prompting(unittest.TestCase):
@@ -81,7 +82,7 @@ class TestHBNBCommand_help(unittest.TestCase):
 
     def test_help_count(self):
         h = ("Usage: count <class> or <class>.count()\n        "
-             "Retrieve the number of instances of a given class.")
+             "Retrieves the number of instances of a given class.")
         with patch("sys.stdout", new=StringIO()) as output:
             self.assertFalse(HBNBCommand().onecmd("help count"))
             self.assertEqual(h, output.getvalue().strip())
